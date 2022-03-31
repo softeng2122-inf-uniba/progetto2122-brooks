@@ -53,20 +53,20 @@ Si suppone che lo studente abbia già installato sulla sua macchina l’ultima v
   - il nome del gruppo deve essere un cognome di un vincitore di [**ACM Turing Award**](https://amturing.acm.org/byyear.cfm), scritto tutto in minuscolo senza spazi e caratteri speciali. </br>
 Il nome del gruppo sarà usato per la creazione del team e la configurazione del repository su GitHub.
 - Una volta completata la formazione del gruppo o raggiunto il numero minimo di componenti, mettersi d'accordo su chi sarà il primo componente del gruppo che accetterà l'*assignment* su GitHub Classroom.
-* Il componente designato dal gruppo dovrà scrivere sul canale `Formazione gruppi` di Teams un messaggio rivolto al docente (usare il *mention* con *@*) dichiarando che "il gruppo *x* è pronto" dove *x* è il nome del gruppo.  
+* Il componente designato dal gruppo dovrà scrivere sul canale `Formazione gruppi` di Teams un messaggio rivolto al docente (usare il *mention* con *@*) dichiarando che "il gruppo *Brooks* è pronto" dove *Brooks* è il nome del gruppo.  
 * Il docente risponderà inviando allo studente in chat il link di assegnazione del progetto.
 
 ### Accettazione assignment del primo componente e creazione repository su GitHub
 **Le seguenti azioni sono di responsabilità del componente designato dal gruppo**:
 * Cliccare sul link di assegnazione del progetto che il docente ha inviato in chat su Teams.
 * Scorrere la lista e cliccare sul proprio indirizzo di email  
-  ![joinClassroom](./img/joinClassroom.png)
+  ![joinClassroom](./img/MyjoinClassroom.jpg)
 
 * Creare il team scrivendo il nome prescelto e cliccando sul pulsante verde `Create team`.
 * Aspettare che GitHub Classroom cloni il repository base per te. 
   ![configuringRepository](./img/configuringRepository.png)
 * *Fai un refresh della pagina web per verificare il completamento. 
-  ![readyToGo](./img/readyToGo.png)
+  ![readyToGo](./img/MyReadyToGo.png)
 * Comunicare al docente in chat l'esito della creazione.
 * Comunicare agli altri componenti del gruppo il link di assegnazione del progetto precedentemente inviato dal docente.
 
@@ -75,13 +75,13 @@ Il nome del gruppo sarà usato per la creazione del team e la configurazione del
 **Le seguenti azioni sono di responsabilità di tutti i componenti tranne quello designato per la creazione del repository**:
 * Cliccare sul link di assegnazione del progetto ricevuto dal collega designato.
 * Scorrere la lista e cliccare sul proprio indirizzo di email  
-  ![joinClassroom](./img/joinClassroom.png)
+  ![joinClassroom](./img/MyjoinClassroom.jpg)
 * Unisciti al tuo team cliccando il corrispondente pulsante `Join` 
-   ![joinTeam](./img/joinTeam.png)
+   ![joinTeam](./img/MyJoinTeam.png)
 <br>**Se non trovi il team è probabile che l'assignment sia stato accettato prima della creazione del team. Fermarsi e avvisare il componente designato dal.
 
 * Se ti sei unito a un team già creato, dovrai prima confermare la scelta e quindi avrai subito la conferma.
-   ![promptAcceptAssginment](./img/promptAcceptAssginment.png)
+   ![promptAcceptAssginment](./img/MypromptAcceptAssginment.png)
 
 * Questo passo terminerà con successo se tutti i componenti del gruppo potranno accedere al repository.
 
@@ -329,7 +329,7 @@ Svolgere le seguenti operazioni:
 
 - recarsi alla pagina principale dedicata al repository su GitHub e fare click sul link *"package"*, nella barra evidenziata in figura;
    **N.B.**: se i Secret menzionati in questa guida sono stati impostati correttamente e se almeno un'esecuzione del workflow di GitHub Actions è andata a buon fine, la vostra immagine Docker (nella sua ultima versione) dovrebbe essere disponibile.
-   ![ExecuteDockerImage_1](./img/ExecuteDockerImage_1.png)
+   ![ExecuteDockerImage_1](./img/MyExecuteDockerImage_1.png)
 
 - nella pagina successiva, fare quindi click sul link del package che la contiene;
 
