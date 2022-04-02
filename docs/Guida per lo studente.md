@@ -162,11 +162,11 @@ A questo punto, il membro del team che ha generato il token dovrà:
 ## Aggiunta del badge di GitHub Actions nel README
 Per aggiungere il badge che riporta l'ultimo esito dell'esecuzione del workflow (stato del workflow) all'interno del file README del vostro repository, seguire le seguenti istruzioni:
 - entrare nella pagina principale del repository e cliccare su `Actions` (subito sotto il titolo, in alto al centro);
-![Update_GitHub_badge_1](./img/Update_GitHub_badge_1.png)
+![Update_GitHub_badge_1](./img/MyUpdate_GitHub_badge_1.png)
 - *"All workflows"*, riporta l'elenco delle esecuzioni del workflow  `ingsw2122.yml` (ogni push e ogni pull request sul repository inducono una nuova esecuzione); fare click sul record relativo alla run più recente (quello più in alto) che riporta il tag `master` (**N.B.**: svolgendo questa operazione all'inizio del progetto, in questa lista troverete soltanto un record, quello relativo all'unica esecuzione del workflow indotta dalla creazione del repository);
-  ![Update_GitHub_badge_2](./img/Update_GitHub_badge_2.png)
+  ![Update_GitHub_badge_2](./img/MyUpdate_GitHub_badge_2.png)
 - fare click sul pulsante `Create status badge` in alto a destra nella pagina e, lasciando invariate le impostazioni di default (`branch` e `event`), fare click su `Copy status badge Markdown`;
-  ![Update_GitHub_badge_3](./img/Update_GitHub_badge_3.png)
+  ![Update_GitHub_badge_3](./img/MyUpdate_GitHub_badge_3.png)
 - La modifica del file Markdown `README.md`sarà fatta come parte dei task dello *Sprint 0* incollando il codice markdown per la costruzione del badge in cima al `README.md`, accanto al titolo del repository.
 
 Il titolo del README.md dovrà apparire come nella seguente figura, con *Wordle* al posto di *scacchi*:
