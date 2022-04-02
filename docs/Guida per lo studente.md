@@ -53,7 +53,7 @@ Si suppone che lo studente abbia già installato sulla sua macchina l’ultima v
   - il nome del gruppo deve essere un cognome di un vincitore di [**ACM Turing Award**](https://amturing.acm.org/byyear.cfm), scritto tutto in minuscolo senza spazi e caratteri speciali. </br>
 Il nome del gruppo sarà usato per la creazione del team e la configurazione del repository su GitHub.
 - Una volta completata la formazione del gruppo o raggiunto il numero minimo di componenti, mettersi d'accordo su chi sarà il primo componente del gruppo che accetterà l'*assignment* su GitHub Classroom.
-* Il componente designato dal gruppo dovrà scrivere sul canale `Formazione gruppi` di Teams un messaggio rivolto al docente (usare il *mention* con *@*) dichiarando che "il gruppo *x* è pronto" dove *x* è il nome del gruppo.  
+* Il componente designato dal gruppo dovrà scrivere sul canale `Formazione gruppi` di Teams un messaggio rivolto al docente (usare il *mention* con *@*) dichiarando che "il gruppo *Brooks* è pronto" dove *Brooks* è il nome del gruppo.  
 * Il docente risponderà inviando allo studente in chat il link di assegnazione del progetto.
 
 ### Accettazione assignment del primo componente e creazione repository su GitHub
@@ -66,7 +66,7 @@ Il nome del gruppo sarà usato per la creazione del team e la configurazione del
 * Aspettare che GitHub Classroom cloni il repository base per te. 
   ![configuringRepository](./img/configuringRepository.png)
 * *Fai un refresh della pagina web per verificare il completamento. 
-  ![readyToGo](./img/readyToGo.png)
+  ![readyToGo](./img/ReadyToGo.png)
 * Comunicare al docente in chat l'esito della creazione.
 * Comunicare agli altri componenti del gruppo il link di assegnazione del progetto precedentemente inviato dal docente.
 
@@ -77,7 +77,7 @@ Il nome del gruppo sarà usato per la creazione del team e la configurazione del
 * Scorrere la lista e cliccare sul proprio indirizzo di email  
   ![joinClassroom](./img/joinClassroom.png)
 * Unisciti al tuo team cliccando il corrispondente pulsante `Join` 
-   ![joinTeam](./img/joinTeam.png)
+   ![joinTeam](./img/JoinTeam.png)
 <br>**Se non trovi il team è probabile che l'assignment sia stato accettato prima della creazione del team. Fermarsi e avvisare il componente designato dal.
 
 * Se ti sei unito a un team già creato, dovrai prima confermare la scelta e quindi avrai subito la conferma.
@@ -113,13 +113,13 @@ L'intervento iniziale a voi richiesto deve essere svolto da *un solo membro del 
 Il membro del team, avendo i diritti di amministratore sul repository, deve:
 
 - entrare nella pagina delle impostazioni del proprio profilo GitHub (click sull'immagine di profilo in alto a destra, poi click sulla voce *"Settings"* nel menù a tendina che compare);
-  ![SaveTokenInSecret_1](./img/SaveTokenInSecret_1.png)
+  ![SaveTokenInSecret_1](./img/MySaveTokenInSecret_1.png)
 
 - entrare nella sezione delle impostazioni per sviluppatori, *"Developer Settings"*, facendo click sul relativo pulsante nella barra laterale;
-  ![SaveTokenInSecret_2](./img/SaveTokenInSecret_2.png)
+  ![SaveTokenInSecret_2](./img/MySaveTokenInSecret_2.png)
 
 - selezionare *"Personal Access Token"* nella barra laterale e successivamente fare click su *"Generate new Token"*, in alto a destra; 
-  ![SaveTokenInSecret_3](./img/SaveTokenInSecret_3.png)
+  ![SaveTokenInSecret_3](./img/MySaveTokenInSecret_3.png)
 
 - indicare nel campo *"Note"* l'utilizzo che si intende fare del token (ad es.: *"Uploads of Docker images to GitHub Packages"*). Tale appunto tornerà utile in futuro per ricordarsi a quale scopo era stato generato il token;
 
@@ -129,7 +129,7 @@ Il membro del team, avendo i diritti di amministratore sul repository, deve:
   - `write:packages`
   - `read:packages`
 
-  ![SaveTokenInSecret_4](./img/SaveTokenInSecret_4.png)
+  ![SaveTokenInSecret_4](./img/MySaveTokenInSecret_4.png)
 
 - fare click sul pulsante *"Generate token"*, in basso nella pagina;
 - copiare il token che apparirà alla pagina seguente e memorizzarlo in un luogo sicuro.
@@ -143,7 +143,7 @@ A questo punto, il membro del team che ha generato il token dovrà:
 
 - recarsi sulla pagina principale del repository e fare click sull'icona *"Settings"* (ultima tab in alto a destra);
   **N.B.**: solo l'amministratore visualizza questa tab!
-  ![SaveTokenInSecret_5](./img/SaveTokenInSecret_5.png)
+  ![SaveTokenInSecret_5](./img/MySaveTokenInSecret_5.png)
 - selezionare la voce *"Secrets"* e la sottovoce *"Actions"* dalla barra laterale;
   ![SaveTokenInSecret_6](./img/SaveTokenInSecret_6.png)
 - fare click sul pulsante *"New repository secret"*:
@@ -162,16 +162,16 @@ A questo punto, il membro del team che ha generato il token dovrà:
 ## Aggiunta del badge di GitHub Actions nel README
 Per aggiungere il badge che riporta l'ultimo esito dell'esecuzione del workflow (stato del workflow) all'interno del file README del vostro repository, seguire le seguenti istruzioni:
 - entrare nella pagina principale del repository e cliccare su `Actions` (subito sotto il titolo, in alto al centro);
-![Update_GitHub_badge_1](./img/Update_GitHub_badge_1.png)
+![Update_GitHub_badge_1](./img/MyUpdate_GitHub_badge_1.png)
 - *"All workflows"*, riporta l'elenco delle esecuzioni del workflow  `ingsw2122.yml` (ogni push e ogni pull request sul repository inducono una nuova esecuzione); fare click sul record relativo alla run più recente (quello più in alto) che riporta il tag `master` (**N.B.**: svolgendo questa operazione all'inizio del progetto, in questa lista troverete soltanto un record, quello relativo all'unica esecuzione del workflow indotta dalla creazione del repository);
-  ![Update_GitHub_badge_2](./img/Update_GitHub_badge_2.png)
+  ![Update_GitHub_badge_2](./img/MyUpdate_GitHub_badge_2.png)
 - fare click sul pulsante `Create status badge` in alto a destra nella pagina e, lasciando invariate le impostazioni di default (`branch` e `event`), fare click su `Copy status badge Markdown`;
-  ![Update_GitHub_badge_3](./img/Update_GitHub_badge_3.png)
+  ![Update_GitHub_badge_3](./img/MyUpdate_GitHub_badge_3.png)
 - La modifica del file Markdown `README.md`sarà fatta come parte dei task dello *Sprint 0* incollando il codice markdown per la costruzione del badge in cima al `README.md`, accanto al titolo del repository.
 
 Il titolo del README.md dovrà apparire come nella seguente figura, con *Wordle* al posto di *scacchi*:
 
-![actions-badge](./img/actions-badge.png)
+![actions-badge](./img/Myactions-badge.png)
 
 Il colore e lo stato del badge potranno cambiare dopo ogni build, riflettendo lo stato del progetto.
 
@@ -211,7 +211,7 @@ I passi per ottenere il badge di Coveralls sono i seguenti:
   ![CoverallsBadge_2](./img/CoverallsBadge_2.png)
 - La modifica del file Markdown `README.md`sarà fatta come parte dei task dello *Sprint 0* incollando il codice markdown per la costruzione del badge in cima al `README.md`, accanto al titolo del repository.
 - Alla fine, il file `README.md` dovrà mostrare due badge, simili a quelli riportati nella figura sottostante, con *Wordle* al posto di *scacchi*:
-![actions+coveralls-badges](./img/actions+coveralls-badges.png)
+![actions+coveralls-badges](./img/Myactions+coveralls-badges.png)
 
 #### Troubleshooting
 
@@ -273,7 +273,7 @@ Il workflow da utilizzare è il [GitHub Flow](https://guides.github.com/introduc
 
 - Subito prima di lavorare sul codice, è opportuno eseguire una `git fetch` e, se `git status` informa che ci sono modifiche, eseguire quindi una `git pull` per poi lavorare sul codice più aggiornato
 - Per ogni nuova *feature*, *user story* o *bug fix* occorre creare o scegliere l’issue su cui lavorare su GitHub e segnarsi come **assigned**
-- Creare un nuovo **branch** sul repository locale con il numero dell'issue o il titolo come nome del branch (*issue#n* oppure *titoloissue*) attraverso il comando `git branch <nome branch> `
+- Creare un nuovo **branch** sul repository locale con il numero dell'issue o il titolo come nome del branch (*issue#n* oppure *titoloissue*) attraverso il comando `git branch <nome branch> `
 - Spostarsi sul nuovo branch appena creato con il comando `git checkout <nome branch>` 	
 - Lavorare al codice dell’applicazione. È consigliabile fare piccole **commit** autoconsistenti di volta in volta, con uno scopo ben preciso e una descrizione dettagliata. *Evitare di fare un’unica grande commit alla fine del lavoro, a meno che la feature o il bug fix non sia davvero di poco conto.*
 - Aggiorna con regolarità il branch sul server origin in GitHub con il comando `git push origin <nome branch>`
@@ -329,12 +329,12 @@ Svolgere le seguenti operazioni:
 
 - recarsi alla pagina principale dedicata al repository su GitHub e fare click sul link *"package"*, nella barra evidenziata in figura;
    **N.B.**: se i Secret menzionati in questa guida sono stati impostati correttamente e se almeno un'esecuzione del workflow di GitHub Actions è andata a buon fine, la vostra immagine Docker (nella sua ultima versione) dovrebbe essere disponibile.
-   ![ExecuteDockerImage_1](./img/ExecuteDockerImage_1.png)
+   ![ExecuteDockerImage_1](./img/MyExecuteDockerImage_1a.png)
 
 - nella pagina successiva, fare quindi click sul link del package che la contiene;
 
 - nella pagina dedicata al package è indicato il comando da copiare ed eseguire nel terminale per scaricare l'immagine Docker in locale.
-   ![ExecuteDockerImage_2](./img/ExecuteDockerImage_2.png)
+   ![ExecuteDockerImage_2](./img/MyExecuteDockerImage_2a.png)
    
 - incollare ed eseguire il comando nel terminale. Attendere che Docker scarichi l’immagine dell’applicazione
 
