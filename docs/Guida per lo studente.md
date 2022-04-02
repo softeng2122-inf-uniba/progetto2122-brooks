@@ -171,7 +171,7 @@ Per aggiungere il badge che riporta l'ultimo esito dell'esecuzione del workflow 
 
 Il titolo del README.md dovrà apparire come nella seguente figura, con *Wordle* al posto di *scacchi*:
 
-![actions-badge](./img/actions-badge.png)
+![actions-badge](./img/Myactions-badge.png)
 
 Il colore e lo stato del badge potranno cambiare dopo ogni build, riflettendo lo stato del progetto.
 
