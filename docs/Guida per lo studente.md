@@ -60,13 +60,13 @@ Il nome del gruppo sarà usato per la creazione del team e la configurazione del
 **Le seguenti azioni sono di responsabilità del componente designato dal gruppo**:
 * Cliccare sul link di assegnazione del progetto che il docente ha inviato in chat su Teams.
 * Scorrere la lista e cliccare sul proprio indirizzo di email  
-  ![joinClassroom](./img/MyjoinClassroom.jpg)
+  ![joinClassroom](./img/joinClassroom.png)
 
 * Creare il team scrivendo il nome prescelto e cliccando sul pulsante verde `Create team`.
 * Aspettare che GitHub Classroom cloni il repository base per te. 
   ![configuringRepository](./img/configuringRepository.png)
 * *Fai un refresh della pagina web per verificare il completamento. 
-  ![readyToGo](./img/MyReadyToGo.png)
+  ![readyToGo](./img/ReadyToGo.png)
 * Comunicare al docente in chat l'esito della creazione.
 * Comunicare agli altri componenti del gruppo il link di assegnazione del progetto precedentemente inviato dal docente.
 
@@ -75,13 +75,13 @@ Il nome del gruppo sarà usato per la creazione del team e la configurazione del
 **Le seguenti azioni sono di responsabilità di tutti i componenti tranne quello designato per la creazione del repository**:
 * Cliccare sul link di assegnazione del progetto ricevuto dal collega designato.
 * Scorrere la lista e cliccare sul proprio indirizzo di email  
-  ![joinClassroom](./img/MyjoinClassroom.jpg)
+  ![joinClassroom](./img/joinClassroom.png)
 * Unisciti al tuo team cliccando il corrispondente pulsante `Join` 
-   ![joinTeam](./img/MyJoinTeam.png)
+   ![joinTeam](./img/JoinTeam.png)
 <br>**Se non trovi il team è probabile che l'assignment sia stato accettato prima della creazione del team. Fermarsi e avvisare il componente designato dal.
 
 * Se ti sei unito a un team già creato, dovrai prima confermare la scelta e quindi avrai subito la conferma.
-   ![promptAcceptAssginment](./img/MypromptAcceptAssginment.png)
+   ![promptAcceptAssginment](./img/promptAcceptAssginment.png)
 
 * Questo passo terminerà con successo se tutti i componenti del gruppo potranno accedere al repository.
 
@@ -113,13 +113,13 @@ L'intervento iniziale a voi richiesto deve essere svolto da *un solo membro del 
 Il membro del team, avendo i diritti di amministratore sul repository, deve:
 
 - entrare nella pagina delle impostazioni del proprio profilo GitHub (click sull'immagine di profilo in alto a destra, poi click sulla voce *"Settings"* nel menù a tendina che compare);
-  ![SaveTokenInSecret_1](./img/SaveTokenInSecret_1.png)
+  ![SaveTokenInSecret_1](./img/MySaveTokenInSecret_1.png)
 
 - entrare nella sezione delle impostazioni per sviluppatori, *"Developer Settings"*, facendo click sul relativo pulsante nella barra laterale;
-  ![SaveTokenInSecret_2](./img/SaveTokenInSecret_2.png)
+  ![SaveTokenInSecret_2](./img/MySaveTokenInSecret_2.png)
 
 - selezionare *"Personal Access Token"* nella barra laterale e successivamente fare click su *"Generate new Token"*, in alto a destra; 
-  ![SaveTokenInSecret_3](./img/SaveTokenInSecret_3.png)
+  ![SaveTokenInSecret_3](./img/MySaveTokenInSecret_3.png)
 
 - indicare nel campo *"Note"* l'utilizzo che si intende fare del token (ad es.: *"Uploads of Docker images to GitHub Packages"*). Tale appunto tornerà utile in futuro per ricordarsi a quale scopo era stato generato il token;
 
@@ -129,7 +129,7 @@ Il membro del team, avendo i diritti di amministratore sul repository, deve:
   - `write:packages`
   - `read:packages`
 
-  ![SaveTokenInSecret_4](./img/SaveTokenInSecret_4.png)
+  ![SaveTokenInSecret_4](./img/MySaveTokenInSecret_4.png)
 
 - fare click sul pulsante *"Generate token"*, in basso nella pagina;
 - copiare il token che apparirà alla pagina seguente e memorizzarlo in un luogo sicuro.
@@ -143,7 +143,7 @@ A questo punto, il membro del team che ha generato il token dovrà:
 
 - recarsi sulla pagina principale del repository e fare click sull'icona *"Settings"* (ultima tab in alto a destra);
   **N.B.**: solo l'amministratore visualizza questa tab!
-  ![SaveTokenInSecret_5](./img/SaveTokenInSecret_5.png)
+  ![SaveTokenInSecret_5](./img/MySaveTokenInSecret_5.png)
 - selezionare la voce *"Secrets"* e la sottovoce *"Actions"* dalla barra laterale;
   ![SaveTokenInSecret_6](./img/SaveTokenInSecret_6.png)
 - fare click sul pulsante *"New repository secret"*:
