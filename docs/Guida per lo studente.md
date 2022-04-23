@@ -329,12 +329,12 @@ Svolgere le seguenti operazioni:
 
 - recarsi alla pagina principale dedicata al repository su GitHub e fare click sul link *"package"*, nella barra evidenziata in figura;
    **N.B.**: se i Secret menzionati in questa guida sono stati impostati correttamente e se almeno un'esecuzione del workflow di GitHub Actions è andata a buon fine, la vostra immagine Docker (nella sua ultima versione) dovrebbe essere disponibile.
-   ![ExecuteDockerImage_1](./img/MyExecuteDockerImage_1a.png)
+   ![ExecuteDockerImage_1](./img/ExecuteDockerImage_1.png)
 
 - nella pagina successiva, fare quindi click sul link del package che la contiene;
 
 - nella pagina dedicata al package è indicato il comando da copiare ed eseguire nel terminale per scaricare l'immagine Docker in locale.
-   ![ExecuteDockerImage_2](./img/MyExecuteDockerImage_2a.png)
+   ![ExecuteDockerImage_2](./img/ExecuteDockerImage_2.png)
    
 - incollare ed eseguire il comando nel terminale. Attendere che Docker scarichi l’immagine dell’applicazione
 
