@@ -2,17 +2,30 @@ package it.uniba.app;
 
 public class Wordle 
 {
+    private Utente utente;
+    private ParolaSegreta parolaSegr;
     private Lettera tentativo[][];
     private Integer numTentativo;
     private Boolean avviata;
     private Boolean impostata;
 
-    Wordle(Lettera tentativoRic[][], Integer numTentativoRic, Boolean avviataRic, Boolean impostataRic)
+    Wordle(Utente utenteRic, ParolaSegreta parolaSegrRic, Integer numTentativoRic, Boolean avviataRic, Boolean impostataRic)
     {
-        this.tentativo = tentativoRic;
+        this.utente = utenteRic;
+        this.parolaSegr = parolaSegrRic;
         this.numTentativo = numTentativoRic;
         this.avviata = avviataRic;
         this.impostata = impostataRic;
+    }
+
+    public Utente getUtente()
+    {
+        return this.utente;
+    }
+
+    public ParolaSegreta getParolaSegr()
+    {
+        return this.parolaSegr;
     }
 
     public Lettera[][] getTentativo()

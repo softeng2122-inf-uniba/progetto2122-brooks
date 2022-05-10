@@ -1,14 +1,21 @@
 package it.uniba.app;
 
+enum COLORE_CELLA
+{
+    GIALLO,
+    GRIGIO,
+    VERDE
+}
+
 public class Lettera
 {
-    private char lettera;
-    private String stato;
+    public char lettera;
+    public COLORE_CELLA colore;
 
-     Lettera(char letteraRic, String statoRic)
+     Lettera(char letteraRic, COLORE_CELLA coloreRic)
      {
          this.lettera = letteraRic;
-         this.stato = statoRic;
+         this.colore = coloreRic;
      }
 
      public char getLettera()
@@ -21,13 +28,13 @@ public class Lettera
          this.lettera = letteraRic;
      }
 
-     public String getStato()
+     public COLORE_CELLA getColore()
      {
-         return this.stato;
+         return this.colore;
      }
 
-     public void setStato(String statoRic)
+     public void setColore(COLORE_CELLA coloreRic)
      {
-         this.stato = statoRic;
+         this.colore = coloreRic;
      }
 }
