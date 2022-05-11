@@ -6,16 +6,16 @@ public class Wordle
     private ParolaSegreta parolaSegr;
     private Lettera tentativo[][];
     private Integer numTentativo;
-    private Boolean avviata;
-    private Boolean impostata;
+    private Boolean partitaAvviata;
+    private Boolean parolaImpostata;
 
-    Wordle(Utente utenteRic, ParolaSegreta parolaSegrRic, Integer numTentativoRic, Boolean avviataRic, Boolean impostataRic)
+    Wordle(Utente utenteRic, ParolaSegreta parolaSegrRic, Integer numTentativoRic, Boolean partitaAvviataRic, Boolean parolaImpostataRic)
     {
         this.utente = utenteRic;
         this.parolaSegr = parolaSegrRic;
         this.numTentativo = numTentativoRic;
-        this.avviata = avviataRic;
-        this.impostata = impostataRic;
+        this.partitaAvviata = partitaAvviataRic;
+        this.parolaImpostata = parolaImpostataRic;
     }
 
     public Utente getUtente()
@@ -43,30 +43,30 @@ public class Wordle
         this.numTentativo++;
     }
 
-    public Boolean getAvviata()
+    public Boolean IsAvviata()
     {
-        return this.avviata;
+        return this.partitaAvviata;
     }
 
-    public void setAvviata()
+    public void setPartitaAvviata()
     {
-        if(this.avviata)
-            this.avviata = false;
+        if(this.partitaAvviata)
+            this.partitaAvviata = false;
         else
-            this.avviata = true;
+            this.partitaAvviata = true;
     }
 
-    public Boolean getImpostata()
+    public Boolean getIsParolaImpostata()
     {
-        return this.impostata;
+        return this.parolaImpostata;
     }
 
-    public void setImpostata()
+    public void setParolaImpostata()
     {
-        if(this.impostata)
-            this.impostata = false;
+        if(this.parolaImpostata)
+            this.parolaImpostata = false;
         else
-            this.impostata = true;
+            this.parolaImpostata = true;
     }
 }
 

@@ -5,10 +5,12 @@ class ParolaSegreta
     private String parola;
     private final Integer LUNGH_PAROLA = 5;
 
-    ParolaSegreta(String parolaRic)
+    ParolaSegreta(String parolaRic) throws IllegalArgumentException
     {
-        if(parola.length()>LUNGH_PAROLA)
+        if(parola.length()==LUNGH_PAROLA)
             this.parola = parolaRic;
+        else
+            throw new IllegalArgumentException();
     }
 
     public String getParola()
