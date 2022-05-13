@@ -1,17 +1,11 @@
 package it.uniba.app;
 
 /**
- * Main class of the application.
+ * Classe principale dell'applicazione.
  */
 public final class App {
-
-    /**
-     * Entrypoint of the application.
-     *
-     * @param args command line arguments
-     */
-    public static void main(final String[] args) 
-    {
+    
+    public static void main(final String[] args)  {
 
     }
 }

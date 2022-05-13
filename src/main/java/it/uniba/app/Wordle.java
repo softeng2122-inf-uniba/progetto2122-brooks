@@ -1,7 +1,7 @@
 package it.uniba.app;
 
-public class Wordle 
-{
+public class Wordle {
+
     public final Integer MAX_TENTATIVI = 6;
     private Utente utente;
     private ParolaSegreta parolaSegr;
@@ -10,8 +10,7 @@ public class Wordle
     private Boolean partitaAvviata;
     private Boolean parolaImpostata;
 
-    Wordle(Utente utenteRic, ParolaSegreta parolaSegrRic)
-    {
+    Wordle(Utente utenteRic, ParolaSegreta parolaSegrRic) {
         tentativo = new Lettera[MAX_TENTATIVI][parolaSegr.LUNGH_PAROLA];
         this.utente = utenteRic;
         this.parolaSegr = parolaSegrRic;
@@ -20,8 +19,7 @@ public class Wordle
         this.parolaImpostata = true;
     }
     
-    Wordle(Utente utenteRic)
-    {
+    Wordle(Utente utenteRic) {
         tentativo = new Lettera[MAX_TENTATIVI][parolaSegr.LUNGH_PAROLA];
         this.utente = utenteRic;
         this.parolaSegr = null;
@@ -30,38 +28,31 @@ public class Wordle
         this.parolaImpostata = false;  
     }
 
-    public Utente getUtente()
-    {
+    public Utente getUtente() {
         return this.utente;
     }
 
-    public ParolaSegreta getParolaSegr()
-    {
+    public ParolaSegreta getParolaSegr() {
         return this.parolaSegr;
     }
 
-    public Lettera[][] getTentativo()
-    {
+    public Lettera[][] getTentativo() {
         return this.tentativo;
     }
 
-    public Integer getNumTentativo()
-    {
+    public Integer getNumTentativo() {
         return this.numTentativo;
     }
 
-    public void aumentaNumTentativo()
-    {
+    public void aumentaNumTentativo() {
         this.numTentativo++;
     }
 
-    public Boolean IsAvviata()
-    {
+    public Boolean isAvviata() {
         return this.partitaAvviata;
     }
 
-    public Boolean IsParolaImpostata()
-    {
-        return this.parolaImpostata;
+    public Boolean isParolaImpostata() {
+        return this.parolaImpostata; 
     }
 }
