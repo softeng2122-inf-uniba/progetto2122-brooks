@@ -1,6 +1,5 @@
 package it.uniba.app;
 
-interface Scanner<T>
-{
+interface Scanner<T> {
     public T Scan(String cmd);
 }
