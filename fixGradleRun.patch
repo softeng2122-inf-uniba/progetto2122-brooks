@@ -1,0 +1,54 @@
+From 0d1ba88d3bd1df8336dd6f9d411922143b46d511 Mon Sep 17 00:00:00 2001
+From: Luigi Quaranta <luigi.quaranta@uniba.it>
+Date: Fri, 13 May 2022 11:32:06 +0200
+Subject: [PATCH] Add a run configuration to the Gradle build script
+
+In particular, set up the standard input as System.in
+
+```groovy
+run {
+    standardInput = System.in
+}
+```
+---
+ build.gradle | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+
+diff --git a/build.gradle b/build.gradle
+index b5c19a8..351e6d2 100644
+--- a/build.gradle
++++ b/build.gradle
+@@ -126,6 +126,12 @@ spotbugsTest {
+     }
+ }
+ 
++run {
++    standardInput = System.in
++}
++// To run the program via Gradle, invoke the `run` task as follows.
++// ./gradlew run -q --console=plain
++
+ test {
+     // Use JUnit 5
+     useJUnitPlatform()
+@@ -137,7 +143,7 @@ test {
+     testLogging {
+         events "passed", "skipped", "failed"
+     }
+-    
++
+     finalizedBy jacocoTestReport
+ }
+ 
+@@ -149,7 +155,7 @@ task spotbugsMainReport {
+                 println( it )
+             }
+         }
+-        
++
+     }
+ }
+ tasks.getByName('spotbugsMain').finalizedBy('spotbugsMainReport')
+-- 
+2.32.0 (Apple Git-132)
+
