@@ -6,7 +6,7 @@ class ParolaSegreta {
 
     private String parola;
     public static final Integer LUNGH_PAROLA = 5;
-    public final String REGEX = "[a-z][a-z][a-z][a-z][a-z]";
+    public static final  String REGEX = "[a-z][a-z][a-z][a-z][a-z]";
 
     ParolaSegreta(String parolaRic) throws IllegalArgumentException {
         this.setParola(parolaRic);
