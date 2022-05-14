@@ -1,4 +1,5 @@
 package it.uniba.app;
+import java.util.Scanner;
 
 public class Wordle {
     public final Integer MAX_TENTATIVI = 6;
@@ -92,5 +93,19 @@ public class Wordle {
         else {
             Output.error("La parola non è ancora stata impostata");
         }
+    }
+
+    public void esci() {
+        String risposta = new String();
+        Scanner scanner = new Scanner(System.in);
+
+        do {
+            Output.loading("Sicuro di voler uscire? (S/N");
+            risposta = scanner.nextLine();
+        } while(!risposta.equalsIgnoreCase("S") && !risposta.equalsIgnoreCase("N"));
+
+        if(risposta.compareTo("S") == 0) {
+            Output.loading("Uscita dal gioco");
+        } 
     }
 }
