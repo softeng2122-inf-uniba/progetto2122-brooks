@@ -1,6 +1,6 @@
 package it.uniba.app;
 import java.util.Scanner;
-
+import java.util.regex.Pattern;
 public class Wordle {
     public final Integer MAX_TENTATIVI = 6;
     private Utente utente;
@@ -106,6 +106,20 @@ public class Wordle {
 
         if(risposta.compareTo("S") == 0) {
             Output.loading("Uscita dal gioco");
+            System.exit(0);
         } 
+    }
+
+    public void impostaParola(String nuovaParola) {
+        if (nuovaParola.length() < 5) {
+            Output.error("Parola troppo corta");
+        } else if(nuovaParola.length() > 5) {
+            Output.error("Parola troppo lunga");
+        } else if(Pattern.compile(ParolaSegreta.REGEX , Pattern.CASE_INSENSITIVE).matcher(nuovaParola).matches() == false) {
+            Output.error("Parola segreta non valida");
+        } else {
+            this.parolaSegr.setParola(nuovaParola);
+        }
+        
     }
 }
