@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 class ParolaSegreta {
 
     private String parola;
-    public final Integer LUNGH_PAROLA = 5;
+    static public final Integer LUNGH_PAROLA = 5;
     public final String REGEX = "[a-z][a-z][a-z][a-z][a-z]";
 
     ParolaSegreta(String parolaRic) throws IllegalArgumentException {
