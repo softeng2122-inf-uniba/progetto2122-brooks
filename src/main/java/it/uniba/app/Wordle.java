@@ -55,4 +55,19 @@ public class Wordle {
     public Boolean isParolaImpostata() {
         return this.parolaImpostata; 
     }
+
+    public void mostraMatrice(){
+        
+    }
+    
+    public void gioca(String input){
+        if(partitaAvviata==true){
+            Output.error("E' già in corso una partita");
+        }
+        else{
+            partitaAvviata=true;
+            mostraMatrice();
+        }
+    }
+    
 }
