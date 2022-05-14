@@ -84,4 +84,13 @@ public class Wordle {
             mostraMatrice();
         }
     }
+
+    public void mostraParola() {
+        if(parolaImpostata == true) {
+            Output.success("Parola segreta: " + parolaSegr.getParola());
+        }
+        else {
+            Output.error("La parola non è ancora stata impostata");
+        }
+    }
 }
