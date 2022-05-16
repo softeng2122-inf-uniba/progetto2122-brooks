@@ -104,7 +104,7 @@ public class Wordle {
             risposta = scanner.nextLine();
         } while(!risposta.equalsIgnoreCase("S") && !risposta.equalsIgnoreCase("N"));
 
-        if(risposta.compareTo("S") == 0) {
+        if(risposta.compareTo("S") == 0 || risposta.compareTo("s") == 0)  {
             Output.loading("Uscita dal gioco");
             System.exit(0);
         } 
@@ -119,7 +119,21 @@ public class Wordle {
             Output.error("Parola segreta non valida");
         } else {
             this.parolaSegr.setParola(nuovaParola);
-        }
-        
+        }    
+    }
+
+    public void abbandonaPartita() {
+        String risposta = new String();
+        Scanner scanner = new Scanner(System.in);
+
+        do {
+            Output.loading("Sicuro di voler abbandonare questa partita? (S/N)");
+            risposta = scanner.nextLine();
+        } while(!risposta.equalsIgnoreCase("S") && !risposta.equalsIgnoreCase("N"));
+
+        if(risposta.compareTo("S") == 0 || risposta.compareTo("s") == 0) {
+            Output.loading("Partita abbandonata");
+            this.partitaAvviata = false;
+        } 
     }
 }

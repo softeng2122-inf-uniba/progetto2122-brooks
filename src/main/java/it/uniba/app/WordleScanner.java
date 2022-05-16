@@ -29,7 +29,7 @@ class WordleScanner implements Scanner<WordleToken> {
     static final public String MOSTRA_PAROLA_REGEX = "/" + MOSTRA_PAROLA_CMD + "[ ]*";
     static final public String NUOVA_PAROLA_REGEX = "/" + NUOVA_PAROLA_CMD + "[ ]+" + ".+" + "[ ]*";
 
-    public WordleToken Scan(String cmd) {
+    public WordleToken scan(String cmd) {
 
         Pattern esciPattern = Pattern.compile(ESCI_REGEX, Pattern.CASE_INSENSITIVE);
         Pattern finePartitaPattern = Pattern.compile(FINE_PARTITA_REGEX, Pattern.CASE_INSENSITIVE);
