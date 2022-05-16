@@ -136,4 +136,16 @@ public class Wordle {
             this.partitaAvviata = false;
         } 
     }
+
+    public static void aiuto() {
+       Output.success("Ecco la lista di comandi disponibili: " +
+                             "\n /gioca --> avvia una nuova partita" + 
+                             "\n /abbandona --> abbandona partita in corso" +
+                             "\n /esc --> esci dalla partita" +
+                             "\n /help --> mostra lista comandi" +
+                             "\n Comandi Paroliere:" +
+                             "\n /mostra --> visualizza la parola segreta" +
+                             "\n /nuova --> imposta nuova parola segreta");
+     }
+ 
 }
