@@ -115,7 +115,7 @@ public class Wordle {
             Output.error("Parola troppo corta");
         } else if(nuovaParola.length() > 5) {
             Output.error("Parola troppo lunga");
-        } else if(Pattern.compile(ParolaSegreta.REGEX , Pattern.CASE_INSENSITIVE).matcher(nuovaParola).matches() == false) {
+        } else if(Pattern.compile(Controllore.REGEX, Pattern.CASE_INSENSITIVE).matcher(nuovaParola).matches() == false) {
             Output.error("Parola segreta non valida");
         } else {
             this.parolaSegr.setParola(nuovaParola);
