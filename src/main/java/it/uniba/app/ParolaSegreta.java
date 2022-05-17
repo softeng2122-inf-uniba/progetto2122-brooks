@@ -1,12 +1,9 @@
 package it.uniba.app;
 
-import java.util.regex.Pattern;
-
 class ParolaSegreta {
 
-    private String parola;
+     private String parola;
     public static final Integer LUNGH_PAROLA = 5;
-    public static final  String REGEX = "[a-z][a-z][a-z][a-z][a-z]";
 
     ParolaSegreta(String parolaRic) throws IllegalArgumentException {
         this.setParola(parolaRic);
@@ -17,13 +14,7 @@ class ParolaSegreta {
     }
 
     public void setParola(String parolaRic) throws IllegalArgumentException {
-        if(Pattern.compile(REGEX, Pattern.CASE_INSENSITIVE).matcher(parolaRic).matches() == false)
-        {
-            throw new IllegalArgumentException();
-        }
-        
-        else
-        {
+        if(Controllore.controlloParola(parolaRic)) {
             this.parola = parolaRic;
         }
     }
