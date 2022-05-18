@@ -147,5 +147,42 @@ public class Wordle {
                              "\n /mostra --> visualizza la parola segreta" +
                              "\n /nuova --> imposta nuova parola segreta");
      }
- 
+
+     public void distributore() {
+         
+        Scanner input = new Scanner(System.in);
+        String cmd;
+        WordleScanner parser = new WordleScanner();
+        WordleToken token;
+
+        cmd = input.nextLine();
+        token = parser.scan(cmd);
+        
+        switch(token) {
+            case USCITA_PROGRAMMA:
+                esci();
+                break;
+            case USCITA_PARTITA:
+                abbandonaPartita();
+                break;
+            case NUOVA_PARTITA:
+                gioca();
+                break;
+            case AIUTO:
+                aiuto();
+                break;
+            case MOSTRA_PAROLA:
+                mostraParola();
+                break;
+            case NUOVA_PAROLA:
+                impostaParola(cmd.substring(("/" + WordleScanner.NUOVA_PAROLA_CMD).length()+1));
+                break;
+            case INVALIDO:
+                Output.error("Comando inserito errato!");
+                break;
+            default:
+                break;
+        }
+
+    }
 }
