@@ -107,5 +107,27 @@ RESPONSABILITA' CLASSI:
 - Si è scelto di utilizzare la classe WordleScanner, che implementerà l'interfaccia Scanner, perchè sarà necessaria un'operazione di parsing sull'input immesso dall'utente. Essa sarà una classe Control.
 - Si è scelto di utilizzare la classe Wordle perchè sarà necessaria per rappresentare il gioco con tutti i metodi richiesti per poter essere eseguito. Essa sarà una classe Boundary.
 
+DIAGRAMMA DI SEQUENZA:
+- /abbandona - Svolto da Aurora Toma
+![abbandonaPartita](./DiagrSeqAbbandonaPartita.png)
+
+- /esci - Svolto da Francesco Papagno
+![esci](./DiagrSeqEsci.jpeg)
+
+- /gioca - Svolto da Giorgia Nardelli
+![gioca](./DiagSeqMetGioca.png)
+
+- /help - Svolto da Alberttin Mihai Paduraru
+![help](./DiagrSeqHelp.jpeg)
+
+- /mostra - Svolto da Giorgia Nardelli
+![mostra](./DiagSeqMetMostra.png)
+
+- /nuova - Svolto da Francesco Papagno
+![nuovaParolaSegreta](./DiagrSeqImpostaParola.jpeg)
+
+- "parolaInput" - Svolto da Walter Mangione
+![indovinaParolaSegreta](./DiagrSeqIndovinaParola.png)
+
 _Analisi retrospettiva_
 - 
