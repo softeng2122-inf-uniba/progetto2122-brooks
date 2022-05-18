@@ -136,15 +136,20 @@ public class Wordle {
         String risposta = new String();
         Scanner scanner = new Scanner(System.in);
 
-        do {
-            Output.loading("Sicuro di voler abbandonare questa partita? (S/N)");
-            risposta = scanner.nextLine();
-        } while(!risposta.equalsIgnoreCase("S") && !risposta.equalsIgnoreCase("N"));
+        if(this.partitaAvviata == true) {
+            do {
+                Output.loading("Sicuro di voler abbandonare questa partita? (S/N)");
+                risposta = scanner.nextLine();
+            } while(!risposta.equalsIgnoreCase("S") && !risposta.equalsIgnoreCase("N"));
 
-        if(risposta.compareTo("S") == 0 || risposta.compareTo("s") == 0) {
-            Output.loading("Partita abbandonata");
-            this.pulisci();
-        } 
+            if(risposta.compareTo("S") == 0 || risposta.compareTo("s") == 0) {
+                Output.loading("Partita abbandonata");
+                this.pulisci();
+            }
+        }
+        else {
+            Output.error("Nessuna partita in corso!");
+        }
     }
 
     public Boolean indovinaParola(String tentativoRic)
