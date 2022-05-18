@@ -1,5 +1,7 @@
 package it.uniba.app;
 
+import org.w3c.dom.UserDataHandler;
+
 /**
  * Classe principale dell'applicazione.
  */
@@ -11,5 +13,7 @@ public final class App {
                 Wordle.aiuto();
             }
         }
+        Wordle game = new Wordle(new Utente("User"));
+        game.distributore();
     }
 }
