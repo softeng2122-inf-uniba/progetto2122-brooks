@@ -1,7 +1,5 @@
 package it.uniba.app;
 
-import org.w3c.dom.UserDataHandler;
-
 /**
  * Classe principale dell'applicazione.
  */
