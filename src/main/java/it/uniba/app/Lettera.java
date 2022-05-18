@@ -13,8 +13,8 @@ class ColoriConsole {
 
     public final static String RESET = "\u001B[0m";
     public final static String GRIGIO = "\u001B[100m";
-    public final static String VERDE = "\u001B[32m";
-    public final static String GIALLO = "\u001B[33m";
+    public final static String VERDE = "\u001B[102m";
+    public final static String GIALLO = "\u001B[103m";
 }
 
 public class Lettera {

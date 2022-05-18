@@ -10,6 +10,6 @@ public final class App {
             if (args[0].equalsIgnoreCase("-h") || args[0].equalsIgnoreCase("--help")) {
                 Wordle.aiuto();
             }
-        } 
+        }
     }
 }

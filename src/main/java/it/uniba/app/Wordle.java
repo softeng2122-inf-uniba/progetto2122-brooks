@@ -219,6 +219,7 @@ public class Wordle {
         WordleScanner parser = new WordleScanner();
         WordleToken token;
 
+        System.out.println("$");
         cmd = input.nextLine();
         token = parser.scan(cmd);
         
@@ -241,16 +242,16 @@ public class Wordle {
             case NUOVA_PAROLA:
                 impostaParola(cmd.substring(("/" + WordleScanner.NUOVA_PAROLA_CMD).length()+1));
                 break;
+            case INDOVINA_PAROLA:
+                indovinaParola(cmd);
+                break;
             case INVALIDO:
                 Output.error("Comando inserito errato!");
                 break;
             default:
                 break;
         }
-
     }
-}
-
 
     public static void aiuto() {
        Output.success("Ecco la lista di comandi disponibili: " +
