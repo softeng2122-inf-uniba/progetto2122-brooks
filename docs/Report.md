@@ -42,6 +42,7 @@ Ad ogni tentativo le celle delle lettere della parola saranno colorate di grigio
 
 _Modello di dominio_
 -
+![DiagrammaClassiProspettivaConcettuale](./DiagrClassProspConc.png)
 
 
 _Requisiti specifici_
@@ -97,6 +98,14 @@ dove base2122 sarà sostitituito con il nome del gruppo.
 
 _OO Design_
 -
+![DiagrammaClassiProspettivaSoftware](./DiagrClassProspSoftw.png)
+
+RESPONSABILITA' CLASSI:
+- Si è scelto di utilizzare la classe ParolaSegreta perchè sarà necessaria per creare istanze che rappresenteranno la parola segreta su cui si baserà il gioco. Essa sarà una classe Entity.
+- Si è scelto di utilizzare la classe Controllore perchè sarà necessaria per controllare la forma corretta della parola segreta inserita (cinque lettere). Essa sarà una classe Control.
+- Si è scelto di utilizzare la classe Utente perchè sarà necessaria per creare istanze che rappresenteranno l'utente che si interfaccerà al gioco. Essa sarà una classe Entity.
+- Si è scelto di utilizzare la classe WordleScanner, che implementerà l'interfaccia Scanner, perchè sarà necessaria un'operazione di parsing sull'input immesso dall'utente. Essa sarà una classe Control.
+- Si è scelto di utilizzare la classe Wordle perchè sarà necessaria per rappresentare il gioco con tutti i metodi richiesti per poter essere eseguito. Essa sarà una classe Boundary.
 
 _Analisi retrospettiva_
 - 
