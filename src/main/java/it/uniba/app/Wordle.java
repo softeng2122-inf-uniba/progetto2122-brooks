@@ -1,7 +1,9 @@
 package it.uniba.app;
 import java.util.Scanner;
 import java.util.regex.Pattern;
+
 public class Wordle {
+
     public final Integer MAX_TENTATIVI = 6;
     private Utente utente;
     private ParolaSegreta parolaSegr;
@@ -11,7 +13,7 @@ public class Wordle {
     private Boolean parolaImpostata;
 
     Wordle(Utente utenteRic, ParolaSegreta parolaSegrRic) {
-        tentativo = new Lettera[MAX_TENTATIVI][ParolaSegreta.LUNGH_PAROLA];
+        this.tentativo = new Lettera[MAX_TENTATIVI][ParolaSegreta.LUNGH_PAROLA];
         this.utente = utenteRic;
         this.parolaSegr = parolaSegrRic;
         this.numTentativo = 0;
@@ -20,7 +22,7 @@ public class Wordle {
     }
     
     Wordle(Utente utenteRic) {
-        tentativo = new Lettera[MAX_TENTATIVI][ParolaSegreta.LUNGH_PAROLA];
+        this.tentativo = new Lettera[MAX_TENTATIVI][ParolaSegreta.LUNGH_PAROLA];
         this.utente = utenteRic;
         this.parolaSegr = null;
         this.numTentativo = 0;
@@ -78,7 +80,7 @@ public class Wordle {
     
     public void gioca() {
         if(partitaAvviata == true) {
-            Output.error("E' già in corso una partita");
+            Output.error("E' gia'in corso una partita");
         }
         else {
             partitaAvviata=true;
@@ -91,7 +93,7 @@ public class Wordle {
             Output.success("Parola segreta: " + parolaSegr.getParola());
         }
         else {
-            Output.error("La parola non è ancora stata impostata");
+            Output.error("La parola non ÃƒÂ¨ ancora stata impostata");
         }
     }
 
@@ -111,15 +113,23 @@ public class Wordle {
     }
 
     public void impostaParola(String nuovaParola) {
-        if (nuovaParola.length() < 5) {
-            Output.error("Parola troppo corta");
-        } else if(nuovaParola.length() > 5) {
-            Output.error("Parola troppo lunga");
-        } else if(Pattern.compile(Controllore.REGEX, Pattern.CASE_INSENSITIVE).matcher(nuovaParola).matches() == false) {
-            Output.error("Parola segreta non valida");
-        } else {
-            this.parolaSegr.setParola(nuovaParola);
-        }    
+        if(this.partitaAvviata == false)
+        {
+            if (nuovaParola.length() < 5) {
+                Output.error("Parola troppo corta");
+            } else if(nuovaParola.length() > 5) {
+                Output.error("Parola troppo lunga");
+            } else if(Pattern.compile(Controllore.REGEX , Pattern.CASE_INSENSITIVE).matcher(nuovaParola).matches() == false) {
+                Output.error("Parola segreta non valida");
+            } else {
+                this.parolaImpostata = true;
+                this.parolaSegr = new ParolaSegreta(nuovaParola);
+            }
+        }
+        else
+        {
+            Output.error("La partita e' in corso");
+        }
     }
 
     public void abbandonaPartita() {
@@ -133,28 +143,83 @@ public class Wordle {
 
         if(risposta.compareTo("S") == 0 || risposta.compareTo("s") == 0) {
             Output.loading("Partita abbandonata");
-            this.partitaAvviata = false;
+            this.pulisci();
         } 
     }
 
-    public static void aiuto() {
-       Output.success("Ecco la lista di comandi disponibili: " +
-                             "\n /gioca --> avvia una nuova partita" + 
-                             "\n /abbandona --> abbandona partita in corso" +
-                             "\n /esc --> esci dalla partita" +
-                             "\n /help --> mostra lista comandi" +
-                             "\n Comandi Paroliere:" +
-                             "\n /mostra --> visualizza la parola segreta" +
-                             "\n /nuova --> imposta nuova parola segreta");
-     }
+    public Boolean indovinaParola(String tentativoRic)
+    {
+        Integer i = 0;
 
-     public void distributore() {
+        if(this.partitaAvviata == false)
+        {
+            Output.error("Partita non avviata!");
+            return false;
+        }
+        if(this.parolaImpostata == false)
+        {
+            Output.error("Parola non impostata!");
+            return false;
+        }
+        if(tentativoRic.length() < ParolaSegreta.LUNGH_PAROLA) {
+            Output.error("Tentativo incompleto!");
+            return false;
+        }
+        else if(tentativoRic.length() > ParolaSegreta.LUNGH_PAROLA) {
+            Output.error("Tentativo eccessivo!");
+            return false;
+        }
+        else if((Pattern.compile(Controllore.REGEX, Pattern.CASE_INSENSITIVE).matcher(tentativoRic).matches()) == false) {
+            Output.error("Tentativo non valido");
+            return false;
+        }
+        else {
+            for(i = 0; i < ParolaSegreta.LUNGH_PAROLA; ++i) {
+                this.tentativo[this.numTentativo][i] = new Lettera();
+                this.tentativo[this.numTentativo][i].lettera = tentativoRic.charAt(i);
+
+                if(Character.toLowerCase(this.parolaSegr.getParola().charAt(i)) == Character.toLowerCase(tentativoRic.charAt(i)))
+                    this.tentativo[this.numTentativo][i].colore = COLORE_CELLA.VERDE;
+                else if(this.parolaSegr.getParola().contains(Character.toString(tentativoRic.charAt(i))))
+                    this.tentativo[this.numTentativo][i].colore = COLORE_CELLA.GIALLO;
+                else
+                    this.tentativo[this.numTentativo][i].colore = COLORE_CELLA.GRIGIO;
+                }
+        }
+
+        this.mostraMatrice();
+        this.aumentaNumTentativo();
+
+        if(this.parolaSegr.getParola().equalsIgnoreCase(tentativoRic)) {
+            Output.success("Parola segreta indovinata!");
+            Output.success("Numero tentativo: " + this.numTentativo);
+            this.pulisci();
+            return true;
+        }
+        else if(this.numTentativo == this.MAX_TENTATIVI) {
+            Output.error("Hai raggiunto il numero massimo di tentativi.");
+            Output.loading("La parola segreta e' <" + this.parolaSegr.getParola() + ">");
+            this.pulisci();
+        }
+
+        return false;
+    }
+
+    public void pulisci()
+    {
+        this.numTentativo = 0;
+        this.partitaAvviata = false;
+        this.tentativo = new Lettera[MAX_TENTATIVI][ParolaSegreta.LUNGH_PAROLA];
+    }
+
+    public void distributore() {
          
         Scanner input = new Scanner(System.in);
         String cmd;
         WordleScanner parser = new WordleScanner();
         WordleToken token;
 
+        System.out.println("$");
         cmd = input.nextLine();
         token = parser.scan(cmd);
         
@@ -177,12 +242,26 @@ public class Wordle {
             case NUOVA_PAROLA:
                 impostaParola(cmd.substring(("/" + WordleScanner.NUOVA_PAROLA_CMD).length()+1));
                 break;
+            case INDOVINA_PAROLA:
+                indovinaParola(cmd);
+                break;
             case INVALIDO:
                 Output.error("Comando inserito errato!");
                 break;
             default:
                 break;
         }
-
     }
+
+    public static void aiuto() {
+       Output.success("Ecco la lista di comandi disponibili: " +
+                             "\n /gioca --> avvia una nuova partita" + 
+                             "\n /abbandona --> abbandona partita in corso" +
+                             "\n /esc --> esci dalla partita" +
+                             "\n /help --> mostra lista comandi" +
+                             "\n Comandi Paroliere:" +
+                             "\n /mostra --> visualizza la parola segreta" +
+                             "\n /nuova --> imposta nuova parola segreta");
+     }
+ 
 }
