@@ -93,7 +93,7 @@ public class Wordle {
             Output.success("Parola segreta: " + parolaSegr.getParola());
         }
         else {
-            Output.error("La parola non ÃƒÂ¨ ancora stata impostata");
+            Output.error("La parola non e' ancora stata impostata");
         }
     }
 
@@ -102,7 +102,7 @@ public class Wordle {
         Scanner scanner = new Scanner(System.in);
 
         do {
-            Output.loading("Sicuro di voler uscire? (S/N");
+            Output.loading("Sicuro di voler uscire? (S/N)");
             risposta = scanner.nextLine();
         } while(!risposta.equalsIgnoreCase("S") && !risposta.equalsIgnoreCase("N"));
 
@@ -219,49 +219,52 @@ public class Wordle {
         WordleScanner parser = new WordleScanner();
         WordleToken token;
 
-        System.out.println("$");
-        cmd = input.nextLine();
-        token = parser.scan(cmd);
-        
-        switch(token) {
-            case USCITA_PROGRAMMA:
-                esci();
-                break;
-            case USCITA_PARTITA:
-                abbandonaPartita();
-                break;
-            case NUOVA_PARTITA:
-                gioca();
-                break;
-            case AIUTO:
-                aiuto();
-                break;
-            case MOSTRA_PAROLA:
-                mostraParola();
-                break;
-            case NUOVA_PAROLA:
-                impostaParola(cmd.substring(("/" + WordleScanner.NUOVA_PAROLA_CMD).length()+1));
-                break;
-            case INDOVINA_PAROLA:
-                indovinaParola(cmd);
-                break;
-            case INVALIDO:
-                Output.error("Comando inserito errato!");
-                break;
-            default:
-                break;
+        while(true) {
+            System.out.print("Inserisci un comando: ");
+            cmd = input.nextLine();
+            token = parser.scan(cmd);
+
+
+            switch(token) {
+                case USCITA_PROGRAMMA:
+                    esci();
+                    break;
+                case USCITA_PARTITA:
+                    abbandonaPartita();
+                    break;
+                case NUOVA_PARTITA:
+                    gioca();
+                    break;
+                case AIUTO:
+                    aiuto();
+                    break;
+                case MOSTRA_PAROLA:
+                    mostraParola();
+                    break;
+                case NUOVA_PAROLA:
+                    impostaParola(cmd.substring(("/" + WordleScanner.NUOVA_PAROLA_CMD).length()+1));
+                    break;
+                case INDOVINA_PAROLA:
+                    indovinaParola(cmd);
+                    break;
+                case INVALIDO:
+                    Output.error("Comando inserito errato!");
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
     public static void aiuto() {
-       Output.success("Ecco la lista di comandi disponibili: " +
+        System.out.println("Ecco la lista di comandi disponibili: " +
                              "\n /gioca --> avvia una nuova partita" + 
                              "\n /abbandona --> abbandona partita in corso" +
                              "\n /esc --> esci dalla partita" +
                              "\n /help --> mostra lista comandi" +
                              "\n Comandi Paroliere:" +
                              "\n /mostra --> visualizza la parola segreta" +
-                             "\n /nuova --> imposta nuova parola segreta");
+                             "\n /nuova <parola> --> imposta nuova parola segreta");
      }
  
 }
