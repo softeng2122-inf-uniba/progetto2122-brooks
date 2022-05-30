@@ -15,7 +15,7 @@ enum WordleToken {
 
 class WordleScanner implements Scanner<WordleToken> {
 
-    static final public String ESCI_CMD = "esc";
+    static final public String ESCI_CMD = "esci";
     static final public String FINE_PARTITA_CMD = "abbandona";
     static final public String NUOVA_PARTITA_CMD = "gioca";
     static final public String AIUTO_CMD = "help";

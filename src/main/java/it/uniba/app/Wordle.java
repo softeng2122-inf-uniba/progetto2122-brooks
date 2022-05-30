@@ -270,7 +270,7 @@ public class Wordle {
         System.out.println("Ecco la lista di comandi disponibili: " +
                              "\n /gioca --> avvia una nuova partita" + 
                              "\n /abbandona --> abbandona partita in corso" +
-                             "\n /esc --> esci dalla partita" +
+                             "\n /esci --> esci dalla partita" +
                              "\n /help --> mostra lista comandi" +
                              "\n Comandi Paroliere:" +
                              "\n /mostra --> visualizza la parola segreta" +
