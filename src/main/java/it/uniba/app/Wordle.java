@@ -223,7 +223,7 @@ public class Wordle {
     }
 
     public void distributore() {
-        
+
         Scanner input = new Scanner(System.in);
         String cmd;
         WordleScanner parser = new WordleScanner();
@@ -258,6 +258,7 @@ public class Wordle {
                     break;
                 case INVALIDO:
                     Output.error("Comando inserito errato!");
+                    Wordle.aiuto();
                     break;
                 default:
                     break;
