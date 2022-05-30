@@ -62,7 +62,7 @@ public class Wordle {
         int i = 0;
         int j = 0;
         int x = 0;
-
+        System.out.print(" ");
         for(x = 0; x<ParolaSegreta.LUNGH_PAROLA; x++) {
             System.out.print(" " + (x + 1));
         }
@@ -72,7 +72,12 @@ public class Wordle {
         for(i = 0; i<MAX_TENTATIVI; i++) {
             System.out.print(i + 1 + " ");
             for(j = 0; j<ParolaSegreta.LUNGH_PAROLA; j++) {
-                System.out.print(this.tentativo[i][j] + " ");
+                if(tentativo[i][j]==null) {
+                    System.out.print(" ");
+                } 
+                else {
+                    System.out.print(this.tentativo[i][j] + " ");
+                }
             }
             System.out.println();
         }
