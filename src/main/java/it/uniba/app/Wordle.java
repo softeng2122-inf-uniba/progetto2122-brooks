@@ -223,7 +223,7 @@ public class Wordle {
     }
 
     public void distributore() {
-         
+
         Scanner input = new Scanner(System.in);
         String cmd;
         WordleScanner parser = new WordleScanner();
@@ -233,7 +233,6 @@ public class Wordle {
             System.out.print("Inserisci un comando: ");
             cmd = input.nextLine();
             token = parser.scan(cmd);
-
 
             switch(token) {
                 case USCITA_PROGRAMMA:
@@ -252,13 +251,14 @@ public class Wordle {
                     mostraParola();
                     break;
                 case NUOVA_PAROLA:
-                    impostaParola(cmd.substring(("/" + WordleScanner.NUOVA_PAROLA_CMD).length()+1));
+                    impostaParola(cmd.substring(("/" + WordleScanner.NUOVA_PAROLA_CMD).length() + 1));
                     break;
                 case INDOVINA_PAROLA:
                     indovinaParola(cmd);
                     break;
                 case INVALIDO:
                     Output.error("Comando inserito errato!");
+                    Wordle.aiuto();
                     break;
                 default:
                     break;
