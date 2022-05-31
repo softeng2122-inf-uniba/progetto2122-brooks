@@ -1,6 +1,6 @@
 package it.uniba.app;
 
-class ParolaSegreta {
+class ParolaSegreta implements Cloneable{
 
      private String parola;
     public static final Integer LUNGH_PAROLA = 5;
@@ -17,5 +17,10 @@ class ParolaSegreta {
         if(Controllore.controlloParola(parolaRic)) {
             this.parola = parolaRic;
         }
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException{
+        return super.clone();
     }
 }

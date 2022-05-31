@@ -1,6 +1,6 @@
 package it.uniba.app;
 
-public class Utente {
+public class Utente implements Cloneable{
     
         private String nome;
 
@@ -14,5 +14,10 @@ public class Utente {
 
         public void setNome(String nomeRic) {
             this.nome = nomeRic;
+        }
+        
+        @Override
+        public Object clone() throws CloneNotSupportedException{
+            return super.clone();
         }
 }
