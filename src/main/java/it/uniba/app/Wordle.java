@@ -30,16 +30,12 @@ public class Wordle {
         this.parolaImpostata = false;  
     }
 
-    public Utente getUtente() {
-        return this.utente;
+    public Utente getUtente() throws CloneNotSupportedException {
+        return (Utente)this.utente.clone();
     }
 
-    public ParolaSegreta getParolaSegr() {
-        return this.parolaSegr;
-    }
-
-    public Lettera[][] getTentativo() {
-        return this.tentativo;
+    public ParolaSegreta getParolaSegr() throws CloneNotSupportedException{
+        return (ParolaSegreta)this.parolaSegr.clone();
     }
 
     public Integer getNumTentativo() {
@@ -103,7 +99,7 @@ public class Wordle {
     }
 
     public void esci() {
-        String risposta = new String();
+        String risposta = "";
         Scanner scanner = new Scanner(System.in);
 
         do {
@@ -138,7 +134,7 @@ public class Wordle {
     }
 
     public void abbandonaPartita() {
-        String risposta = new String();
+        String risposta = "";
         Scanner scanner = new Scanner(System.in);
 
         if(this.partitaAvviata == true) {
@@ -206,7 +202,7 @@ public class Wordle {
             this.pulisci();
             return true;
         }
-        else if(this.numTentativo == this.MAX_TENTATIVI) {
+        else if(this.numTentativo.equals(this.MAX_TENTATIVI)) {
             Output.error("Hai raggiunto il numero massimo di tentativi.");
             Output.loading("La parola segreta e' <" + this.parolaSegr.getParola() + ">");
             this.pulisci();
