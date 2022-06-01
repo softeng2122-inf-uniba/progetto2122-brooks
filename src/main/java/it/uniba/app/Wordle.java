@@ -182,14 +182,14 @@ public class Wordle {
         else {
             for(i = 0; i < ParolaSegreta.LUNGH_PAROLA; ++i) {
                 this.tentativo[this.numTentativo][i] = new Lettera();
-                this.tentativo[this.numTentativo][i].lettera = tentativoRic.charAt(i);
+                this.tentativo[this.numTentativo][i].setLettera(tentativoRic.charAt(i));
 
                 if(Character.toLowerCase(this.parolaSegr.getParola().charAt(i)) == Character.toLowerCase(tentativoRic.charAt(i)))
-                    this.tentativo[this.numTentativo][i].colore = COLORE_CELLA.VERDE;
+                    this.tentativo[this.numTentativo][i].setColore(ColoreCella.VERDE);
                 else if(this.parolaSegr.getParola().contains(Character.toString(tentativoRic.charAt(i))))
-                    this.tentativo[this.numTentativo][i].colore = COLORE_CELLA.GIALLO;
+                    this.tentativo[this.numTentativo][i].setColore(ColoreCella.GIALLO);
                 else
-                    this.tentativo[this.numTentativo][i].colore = COLORE_CELLA.GRIGIO;
+                    this.tentativo[this.numTentativo][i].setColore(ColoreCella.GRIGIO);
                 }
         }
 

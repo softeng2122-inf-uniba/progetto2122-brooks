@@ -1,11 +1,16 @@
 package it.uniba.app;
 
-class ParolaSegreta implements Cloneable{
-
-     private String parola;
+class ParolaSegreta implements Cloneable {
+/**
+ *Parola segreta.
+ */
+    private String parola;
+/**
+ *Definisce la lunghezza parola.
+ */
     public static final Integer LUNGH_PAROLA = 5;
 
-    ParolaSegreta(String parolaRic) throws IllegalArgumentException {
+    ParolaSegreta(final String parolaRic) throws IllegalArgumentException {
         this.setParola(parolaRic);
     }
 
@@ -13,14 +18,16 @@ class ParolaSegreta implements Cloneable{
         return this.parola;
     }
 
-    public void setParola(String parolaRic) throws IllegalArgumentException {
-        if(Controllore.controlloParola(parolaRic)) {
+    public void setParola(
+        final String parolaRic
+        ) throws IllegalArgumentException {
+        if (Controllore.controlloParola(parolaRic)) {
             this.parola = parolaRic;
         }
     }
 
     @Override
-    public Object clone() throws CloneNotSupportedException{
+    public Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
 }

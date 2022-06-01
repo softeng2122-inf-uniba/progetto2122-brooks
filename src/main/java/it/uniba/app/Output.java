@@ -1,19 +1,18 @@
 package it.uniba.app;
 
-class Output
-{
-    public static void success(String log)
-    {
+final class Output {
+    private Output() {
+    }
+
+    public static void success(final String log) {
         System.out.println("[+]" + log);
     }
 
-    public static void loading(String log)
-    {
+    public static void loading(final String log) {
         System.out.println("[!!]" + log);
     }
 
-    public static void error(String log)
-    {
+    public static void error(final String log) {
         System.err.println("[-]" + log);
     }
 }
