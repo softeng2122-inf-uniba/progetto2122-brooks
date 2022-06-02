@@ -76,7 +76,7 @@ public class Wordle {
  *Aumenta il numero dei tentativi effettuati.
  */
     public void aumentaNumTentativo() {
-        this.numTentativo++;
+        this.numTentativo = this.numTentativo + 1;
     }
 /**
  *Restituisce true se la partita è stata avviata, false altrimenti.
