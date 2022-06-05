@@ -10,10 +10,13 @@ import org.junit.jupiter.api.TestInstance.Lifecycle;
 @TestInstance(Lifecycle.PER_CLASS)
 public class WordleScannerTest {
 
-    WordleScanner ws;
+    /**
+     * Oggetto su cui eseguire operazioni di testing.
+     */
+    private WordleScanner ws;
 
     /**
-     * Inizializza l'oggetto prima di lavorarci.
+     * Inizializza l'oggetto prima di utilizzarlo.
      */
     @BeforeAll
     void init() {
@@ -21,7 +24,8 @@ public class WordleScannerTest {
     }
 
     /**
-     * L'iniziatore di un comando senza argomento dovrebbe essere riconosciuto come
+     * L'iniziatore di un comando senza argomento
+     * dovrebbe essere riconosciuto come
      * un invalido token.
      */
     @Test
@@ -34,7 +38,7 @@ public class WordleScannerTest {
      * un invalido token.
      */
     @Test
-    void invalidCommand () {
+    void invalidCommand() {
         assertEquals(WordleToken.INVALIDO, this.ws.scan("/ThisIsNotACommand"));
     }
 
@@ -43,7 +47,7 @@ public class WordleScannerTest {
      * un token valido.
      */
     @Test
-    void esciCommand () {
+    void esciCommand() {
         assertEquals(WordleToken.USCITA_PROGRAMMA, this.ws.scan("/esci"));
     }
 
@@ -52,7 +56,7 @@ public class WordleScannerTest {
      * un token valido.
      */
     @Test
-    void nuovaCommand () {
+    void nuovaCommand() {
         assertEquals(WordleToken.NUOVA_PAROLA, this.ws.scan("/nuova parola"));
     }
 
@@ -61,7 +65,7 @@ public class WordleScannerTest {
      * un token valido.
      */
     @Test
-    void giocaCommand () {
+    void giocaCommand() {
         assertEquals(WordleToken.NUOVA_PARTITA, this.ws.scan("/gioca"));
     }
 
@@ -70,7 +74,7 @@ public class WordleScannerTest {
      * un token valido.
      */
     @Test
-    void abbandonaCommand () {
+    void abbandonaCommand() {
         assertEquals(WordleToken.USCITA_PARTITA, this.ws.scan("/abbandona"));
     }
 
@@ -79,7 +83,7 @@ public class WordleScannerTest {
      * un token valido.
      */
     @Test
-    void mostraCommand () {
+    void mostraCommand() {
         assertEquals(WordleToken.MOSTRA_PAROLA, this.ws.scan("/mostra"));
     }
 
@@ -88,17 +92,19 @@ public class WordleScannerTest {
      * un token valido.
      */
     @Test
-    void aiutoCommand () {
+    void aiutoCommand() {
         assertEquals(WordleToken.AIUTO, this.ws.scan("/help"));
     }
 
     /**
-     * Il tentativo di indovinare la parola dovrebbe essere riconosciuto come
+     * Il tentativo di indovinare la parola
+     * dovrebbe essere riconosciuto come
      * un token valido.
      */
     @Test
-    void indovinaCommand () {
-        assertEquals(WordleToken.INDOVINA_PAROLA, this.ws.scan("IWaNNaGuessAWord"));
+    void indovinaCommand() {
+        assertEquals(WordleToken.INDOVINA_PAROLA,
+        this.ws.scan("IWaNNaGuessAWord"));
     }
 
     /**

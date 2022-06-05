@@ -10,7 +10,7 @@ public class ControlloreTest {
      * sollevare un'eccezione.
      */
     @Test
-    void WrongPattern() {
+    void wrongPattern() {
 
         Assertions.assertThrows(IllegalArgumentException.class,
                 () -> {
@@ -23,7 +23,7 @@ public class ControlloreTest {
      * un'eccezione.
      */
     @Test
-    void MajorSize() {
+    void majorSize() {
 
         Assertions.assertThrows(IllegalArgumentException.class,
                 () -> {
@@ -36,7 +36,7 @@ public class ControlloreTest {
      * un'eccezione.
      */
     @Test
-    void MinorSize() {
+    void minorSize() {
 
         Assertions.assertThrows(IllegalArgumentException.class,
                 () -> {
@@ -48,7 +48,7 @@ public class ControlloreTest {
      * Un input corretto non dovrebbe sollevare un'eccezione.
      */
     @Test
-    void CorrectInput() {
+    void correctInput() {
 
         Assertions.assertDoesNotThrow(
                 () -> {
@@ -58,11 +58,11 @@ public class ControlloreTest {
     }
 
     /**
-     * Test sul caso limite di una parola che rispetta il pattern ma contenente 6
-     * lettere.
+     * Test sul caso limite di una parola che rispetta il pattern
+     * ma contenente 6 lettere.
      */
     @Test
-    void LimitMajorSize() {
+    void limitMajorSize() {
         Assertions.assertThrows(IllegalArgumentException.class,
                 () -> {
                     Controllore.controlloParola("abcdef");
@@ -70,14 +70,15 @@ public class ControlloreTest {
     }
 
     /**
-     * Test sul caso limite di una parola che rispetta il pattern ma contenente 4
-     * lettere.
+     * Test sul caso limite di una parola
+     * che rispetta il pattern ma contenente 4 lettere.
      */
     @Test
-    void LimitMinorSize() {
+    void limitMinorSize() {
         Assertions.assertThrows(IllegalArgumentException.class,
                 () -> {
-                    Controllore.controlloParola("abcdef");
+                    Controllore
+                    .controlloParola("abcdef");
                 });
     }
 }
