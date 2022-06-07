@@ -163,5 +163,18 @@ _Paroliere_
 - /mostra --> visualizza la parola segreta;
 - /nuova [parola] --> imposta una nuova parola segreta.
 
+_Processo di sviluppo e organizzazione del lavoro_
+-
+
+Il nostro gruppo ha proceduto in tale modo:
+- Quando possibile per tutti i partecipanti, abbiamo svolto un meeting di pianificazione lo stesso giorno in cui ci è estato assegnato il lavoro. Uno, o massimo due giorni dopo, altrimenti.
+- Abbiamo deciso insieme gli assegnatari dei vari compiti tenendo in considerazione la difficoltà prevista per ognuno di essi, e le competenze di ciascuno di noi.
+- Abbiamo svolto un meeting ogni due/tre giorni, per comunicare al gruppo eventuali problemi riscontrati nello svolgimento del compito, successivamente risolti con l'aiuto di ognuno di noi. Oppure per mostrare il lavoro svolto, chiedendo conferma o possibili miglioramenti al resto del gruppo.
+- Siamo stati sempre in contatto telefonico, scegliendo in caso di necessità di svolgere più (o meno) meeting settimanali.
+- In presenza di problemi tutti ci siamo attivati alla ricerca di una soluzione. Solo in casi estremi abbiamo preferito rivolgerci al professore.
+- Solo dopo che tutti i partecipanti erano d'accordo su quanto eseguito, si è proceduto con l'approvazione della pull request. Quest'ultima spesso svolta in contemporanea con il meeting settimanale, al susseguirsi di una discussione a riguardo.
+
 _Analisi retrospettiva_
 - 
+Sprint 1:
+![Retrospettiva](./img/Whiteboard.png)
