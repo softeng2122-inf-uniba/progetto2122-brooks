@@ -147,7 +147,24 @@ La seconda soluzione comporterebbe significativi cambi di progettazione.
 
 _Riepilogo del test_
 - 
+La percentuale di test da noi raggiunta è:
 ![Coverage](./img/Coverage.png)
+
+Abbiamo eseguito casi di test relativi alle classi Controllore e WordleScanner.
+Abbiamo applicato il criterio delle Classi di Equivalenza verificando che in presenza di input scorretti venisse riscontrato l'errore aspettato. Il risultato corretto, altrimenti.
+Abbiamo, inoltre, applicato il criterio del Valore Limite, verificando che in presenza di un input rappresentato da un valore limite per la funzione in questione, sia risultato l'errore aspettato. 
+
+Report di checkstyle:
+
+![Checkstyle](./img/CheckstyleReport.png)
+
+Report di Spotbugs:
+
+![Spotbugs](./img/SpotbugsReport.png)
+
+Report di Jacoco:
+
+![Jacoco](./img/JacocoReport.png)
 
 _Manuale utente_
 - 
